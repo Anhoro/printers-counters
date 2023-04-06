@@ -1,0 +1,306 @@
+@import '../2-helpers/constants';
+
+/*================== form ==================*/
+
+.form {
+    /* display: flex; */
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  
+    font-size: 26px;
+  }
+  
+.form__label {
+    margin-bottom: 10px;
+}
+  
+.form__input {
+    width: 100%;
+    padding: 0 5px;
+    margin-bottom: 60px;
+    box-sizing: border-box;
+  
+    background-color: transparent;
+    border: 0;
+    border-bottom: 4px solid $theme;
+    outline: none;
+}
+
+/*================== header ==================*/
+
+header {
+  padding: 10px 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-start;
+
+  font-size: 26px;
+}
+
+.logo {
+    position: relative;
+}
+
+.logo a {
+  display: block;
+}
+
+.logo__tag {
+    position: absolute;
+    bottom: 35px; 
+    left: 0;
+    width: 120%;
+    transform: rotate(-30deg);
+    
+    font-family: "FiraCodeiScript";
+    font-weight: 400;
+    font-style: italic;
+    font-size: 26px;
+    color: rgb(0, 159, 227);    
+}
+
+.main-menu,
+.user-menu {
+  display: flex;
+  align-items: flex-end;
+}
+
+.main-menu a,
+.user-menu a {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  margin: 0 0 0 40px;
+
+  border-bottom: 4px solid transparent;
+
+  transition: border-color 0.15s ease-in 0.1s;
+}
+
+.user-menu a:first-of-type {
+  margin-left: 0;
+}
+
+.main-menu a:hover,
+.main-menu a:focus,
+.user-menu a:hover,
+.user-menu a:focus,
+.main-menu .menu-link__active {
+  margin-bottom: 0;
+
+  border-color: $theme;
+
+  transition-delay: 0s;
+}
+
+.main-menu a::before,
+.user-menu a::before {
+  content: " ";
+
+  position: absolute;
+  width: 10px;
+  height: 6px;
+  bottom: 0;
+  left: calc(50% - 5px);
+
+  background-color: $theme;
+  opacity: 0;
+  transform: translateY(100%);
+
+  transition: all 0.15s ease-in;
+}
+
+.main-menu a:hover::before,
+.user-menu a:hover::before {
+
+  transform: translateY(0);
+  opacity: 1;
+
+  //transition: all 1.15s ease-in;
+}
+
+.main-menu a:active,
+.user-menu a:active {
+  background-color: #eee;
+}
+
+.user-menu {
+  margin-left: auto;
+}
+
+/*==================  main  ==================*/
+
+.connection__btn {
+  position: absolute;
+  padding: 100px 0;
+  top: calc(50% - 167.5px);
+  left: calc(50% - 260px);
+
+  transition: background-color 0.1s ease-in;
+}
+
+.connection__btn:hover img,
+.connection__btn:focus img{
+  display: none;
+}
+
+.connection__btn:hover .connection__container,
+.connection__btn:focus .connection__container {
+  background-size: 480px auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.connection__btn:hover .connection__connected,
+.connection__btn:focus .connection__connected {
+  background-image: url('../../images/disconnected.svg');
+}
+
+.connection__btn:hover .connection__disconnected,
+.connection__btn:focus .connection__disconnected {
+  background-image: url('../../images/connected.svg');
+}
+
+.connection__btn:hover,
+.connection__btn:focus {
+  background-color: $themeLight;
+  border-radius: 20px;
+}
+
+.connection__btn:hover .connection__status,
+.connection__btn:focus .connection__status {
+  display: none;
+}
+
+.connection__btn:hover .connection__question,
+.connection__btn:focus .connection__question {
+  display: block;
+  margin: 0;
+  width: 100%;
+
+  font-family: inherit;
+  font-style: normal;
+  text-align: center;
+}
+
+.connection__container {
+  position: relative;
+  width: 520px;
+  height: 135px;
+}
+
+.connection__image {
+  display: block;
+  width: 480px;
+  margin: 0 auto;
+}
+
+.connection__status,
+.connection__question {
+  position: absolute;
+  bottom: -55px; //-40
+  left: 0;
+  margin: 0 0 0 40%;
+
+  font-family: "FiraCodeiScript";
+  font-weight: 400;
+  font-style: italic;
+  font-size: 26px;
+  text-align: left;
+}
+
+.connection__question {
+  display: none;
+}
+
+.connection__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+.connection__title {
+  flex: 0 0 40%;
+  padding-left: 75px;
+  box-sizing: border-box;
+}
+
+.connection__value {
+  margin: 0;
+}
+
+/*================== footer ==================*/
+
+footer {
+  margin: 60px 0 30px 0;
+}
+
+.footer__container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer__col {
+  flex-basis: 50%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.footer__col:first-child {
+  text-align: right;
+}
+
+.footer_text,
+.footer__link {
+  font-size: 16px; //16 14
+  padding-bottom: 5px;
+}
+
+.footer_text {
+  //display: inline;
+}
+
+.footer__link {
+  position: relative;
+
+  color: $theme;
+  border-bottom: 3px solid transparent;
+
+  transition: border-color 0.15s ease-in 0.1s;
+}
+
+.footer__link::before {
+  content: " ";
+
+  position: absolute;
+  width: 6px;
+  height: 4px;
+  bottom: 0;
+  left: calc(50% - 3px);
+
+  background-color: $theme;
+  opacity: 0;
+  transform: translateY(100%);
+
+  transition: all 0.15s ease-in;
+}
+
+.footer__link:hover,
+.footer__link:focus {
+  border-color: $theme;
+
+  transition-delay: 0s;
+}
+
+.footer__link:hover::before,
+.footer__link:focus::before {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.footer__link:active {
+
+}

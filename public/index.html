@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="Content-Security-Policy" content="form-action 'self'"> -->
+    <title>Printers-counters - back-end</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <div class="navbar">
+                    <div class="logo">
+                        <a><img src="./images/logo.svg" alt="Printers counters logo" width="100"
+                                height="100"></a>
+                        <span class="logo__tag">back-end</span>
+                    </div>
+                    <ul class="main-menu">
+                        <li class="main-menu__item">
+                            <a class="main-menu__link menu-link__active">Main</a>
+                            <a href="http://localhost:4200/" class="main-menu__link">Front-end</a>
+                        </li>
+                    </ul>
+                    <ul class="user-menu">
+                        <li class="user-menu__item">
+                            <a href="#" class="user-menu__link">en</a>
+                        </li>
+                    </ul>
+                    <div class="burger">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container_modal">
+        <h1 class="visually-hidden">Printers-counters - back-end</h1>
+        <h2 class="visually-hidden">Database connection</h2>
+
+        <button class="connection__btn">
+            <div class="connection__container connection__disconnected">
+                <img src="./images/disconnected.svg" alt="disconnected" class="connection__image">
+                <p class="connection__status">Disconnected</p>
+                <p class="connection__question">Press to connect to the database</p>
+            </div>
+            <div class="connection__container connection__connected hidden">
+                <img src="./images/connected.svg" alt="connected" class="connection__image">
+                <p class="connection__status">Connected</p>
+                <p class="connection__question">Press to disconnect from the database</p>
+            </div>
+        </button>
+
+        <div class="connection__meta hidden">
+            <dl class="connection__list">
+                <dt class="connection__title">Database:</dt>
+                <dd class="connection__value connection__database"></dd>
+                <dt class="connection__title">Session time:</dt>
+                <dd class="connection__value connection__session-time"></dd>
+            </dl>
+        </div>
+
+        <form 
+            class="form form__credentials hidden"
+            action="http://localhost:3000/connection"
+            method="post"
+            target="_blank">
+            <h3>Database credentials</h3>
+            <!-- <p>Welcome to the printers-counters server!</p>
+            <p>To start the back-end application, please enter a credentials of your mySQL database</p> -->
+            <label for="db-url" class="form__label">Host link</label>
+            <input type="text" id="db-url" class="form__input" name="db-url" value="localhos">
+            <label for="db-title" class="form__label">Database title</label>
+            <input type="text" id="db-title" class="form__input" name="db-title" value="printers-counters">
+            <label for="user-login" class="form__label">User login</label>
+            <input type="text" id="user-login" class="form__input" name="user-login" value="user">
+            <label for="user-password" class="form__label">User password</label>
+            <input type="password" id="user-password" class="form__input" name="user-password" value="ZuDWA.ftre4">
+    
+            <div>
+                <button type="submit" class="btn btn_rectangle btn__credentials">Connect</button>
+                <button type="button" class="btn btn_rectangle btn__return">Return</button>
+            </div>
+        </form>
+        
+        <div class="request__loading hidden">
+            <img src="./images/loading.svg" alt="loading" class="request__loading-image" width="288" height="81">
+        </div>
+        <p class="request__message hidden"></p>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer__container">
+                <div class="footer__col">
+                    <p class="footer_text">&#169; 2022 &bdquo;<a href="http://astelitgroup.com/"
+                            class="footer__link">Astelit Group</a>&rdquo;</p>
+                </div>
+                <div class="footer__col">
+                    <p class="footer_text">Developed by: <a href="mailto:andrii.horo@gmail.com"
+                            class="footer__link">Anhoro</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </body>
+
+    <script src="js/main.js"></script>
+</html>

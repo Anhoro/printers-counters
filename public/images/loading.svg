@@ -1,0 +1,58 @@
+<svg width="144" height="40.5" version="1.1" viewBox="0 0 38.1 10.716" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <mask id="loadingBarMask">
+   <path id="loadingBar" style="color:#000000;fill:#fff;-inkscape-stroke:none" d="M 16.535156,4.828125 V 5.8867187 H 26.855469 V 4.828125 Z" />
+   <rect id="loadingStatus" x="15.478" y="4.8286" width="1.0583" height="1.0583" fill="#000" stroke-linecap="round" stroke-width=".84666" style="paint-order:markers stroke fill">
+    <animateTransform
+     id="loadingStatusAnumation"
+     attributeName="transform"
+     type="translate"
+     from="0 0"
+     to="11.4 0"
+     dur="2.2s"
+     repeatCount="indefinite"
+     values="0;11.4;11.4;0;0;"
+     keyTimes="0; 0.35; 0.5; 0.85;1"
+    />
+   </rect>
+  </mask>
+ </defs>
+ <g transform="translate(11.642 -15.743)">
+  <g transform="translate(15.809 -.066146)" fill="none" stroke="#000" stroke-width=".66146">
+   <g>
+    <path d="m2.1167 23.812h-0.85208a1 1 45 0 1-1-1v-3.0271a1 1 135 0 1 1-1h8.0542a1 1 45 0 1 1 1v3.0271a1 1 135 0 1-1 1h-0.85208"/>
+    <path d="m2.1167 18.785v-1.6458a1 1 135 0 1 1-1h4.35a1 1 45 0 1 1 1v1.6458"/>
+    <path d="m2.1167 22.225v2.9688a1 1 45 0 0 1 1h4.35a1 1 135 0 0 1-1v-2.9688"/>
+   </g>
+   <g stroke-linecap="round">
+    <path d="m1.5875 22.225h7.4083"/>
+    <path d="m8.9958 20.108h-1.0583"/>
+    <path d="m3.4396 24.871h3.7042"/>
+    <path d="m3.4396 23.548h2.9104"/>
+   </g>
+  </g>
+ </g>
+ <g transform="translate(0 -25.863)" stroke-width=".66146">
+  <path d="m0.99994 28.31a1 1 0 0 0-0.99994 0.99994v4.6147a1 1 0 0 0 0.99994 0.99994h8.5835a1 1 0 0 0 0.99994-0.99994v-4.6147a1 1 0 0 0-0.99994-0.99994zm-0.33848 0.66146h9.2604v5.2917h-9.2604z" style="paint-order:markers stroke fill"/>
+  <g fill="none" stroke="#000">
+   <path d="m11.642 27.194v8.0542a1 1 45 0 0 1 1h1.9687a1 1 135 0 0 1-1v-8.0542a1 1 45 0 0-1-1h-1.9687a1 1 135 0 0-1 1z"/>
+   <path d="m5.2917 34.925v1.3229"/>
+   <g stroke-linecap="round">
+    <path d="m3.9688 36.248h2.6458"/>
+    <path d="m12.965 27.517h1.3229"/>
+    <path d="m12.965 28.84h1.3229"/>
+   </g>
+  </g>
+  <circle cx="13.626" cy="33.867" r=".33073" stroke-linecap="round" style="paint-order:markers stroke fill"/>
+ </g>
+
+/* #009fe3 */
+
+<path id="loadingBar" style="color:#000000;fill:#009fe3;-inkscape-stroke:none" d="M 16.535156,4.828125 V 5.8867187 H 26.855469 V 4.828125 Z" />
+ <g id="maskedLoadingBar" mask="url(#loadingBarMask)" background-color="yellow">
+  <path id="loadingBar" style="color:#000000;fill:#000;-inkscape-stroke:none" d="M 16.535156,4.828125 V 5.8867187 H 26.855469 V 4.828125 Z" />
+ </g>
+
+
+
+</svg>

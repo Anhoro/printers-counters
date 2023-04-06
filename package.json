@@ -1,0 +1,36 @@
+{
+  "name": "printers-counters",
+  "version": "1.0.1",
+  "description": "This is a back-end part of a printers-counters project. Main functions are: connect to the database, get values of total printed pages from web-servers of devices, provide API.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "start_old": "node index.js",
+    "test": "mocha test/specific",
+    "testConsumable": "mocha test/consumable",
+    "testAll": "mocha --timeout 10000",
+    "sass": "sass public/scss/styles.scss:public/css/main.css",
+    "sassemon": "sass --watch public/scss:public/css"
+  },
+  "dependencies": {
+    "express": "^4.17.3",
+    "iconv-lite": "^0.6.3",
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^2.3.3",
+    "pdfkit": "^0.13.0"
+  },
+  "keywords": [
+    "printer",
+    "mfp",
+    "counter",
+    "page"
+  ],
+  "author": "Andrii Horo",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0",
+    "nodemon": "^2.0.15",
+    "sinon": "^13.0.2"
+  }
+}

@@ -1,0 +1,100 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+
+  cursor: pointer;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.container {
+  max-width: ($containerWidth + $containerPadding) + px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 $containerSidePadding + px;
+  box-sizing: border-box;
+}
+
+.container_modal {
+  max-width: ($containerModalWidth + $containerPadding) + px;
+  width: 100%;
+  margin: auto auto 0;
+  padding: 0 $containerSidePadding + px;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 34px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+.hidden {
+  display: none;
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+
+  border: 0;
+  padding: 0;
+  margin: -1px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+}
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+    background: none;
+    border: 0;
+    color: inherit;
+    /* cursor: default; */
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    padding: 0;
+    cursor: pointer;
+    -webkit-appearance: button; /* for input */
+    user-select: none;
+    -webkit-user-select: none; /* for button */
+       -moz-user-select: none;
+        -ms-user-select: none;
+}
